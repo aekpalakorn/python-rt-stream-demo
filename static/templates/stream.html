@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+	<title>Real-Time Tweets Per Minute Plot</title>
+	<script src="http://code.jquery.com/jquery.min.js"></script>
+	 <script>
+      $(document).ready(function () {
+          var host = "10.0.106.64";
+          var port = "8888";
+          var uri = "/ws_stream"; 
+          var ws = new WebSocket("ws://" + host + ":" + port + uri);
+          ws.onopen = function(){
+            console.log('Connection opened.');
+          }
+          ws.onmessage = function(event){
+            $('#tpm_sg_fig').html('<image src="images/'+event.data+'" alt="SG Tweets Per Minute"/>');
+            console.log('Plot updated.');
+          }
+          ws.onclose = function(){
+            console.log('Connection closed.');
+          }
+          $('#tpm_sg_fig').html('<p>Waiting for notification...</p>');
+        });
+    </script>
+</head>
+<body>
+	<h1>Real-Time SG Tweets Per Minute</h1>
+	<div id="tpm_sg_fig"></div>
+</body>
+</html>
