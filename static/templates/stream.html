@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-	<title>Real-Time Tweets Per Minute Plot</title>
+	<title>Real-Time Indexed Tweets Per Minute</title>
 	<script src="http://code.jquery.com/jquery.min.js"></script>
 	 <script>
       $(document).ready(function () {
@@ -13,7 +13,7 @@
             console.log('Connection opened.');
           }
           ws.onmessage = function(event){
-            $('#tpm_sg_fig').html('<image src="images/'+event.data+'" alt="SG Tweets Per Minute"/>');
+            $('#tpm_sg_fig').html('<image src="images/'+event.data+'" alt="SG Indexed Tweets Per Minute"/>');
             console.log('Plot updated.');
           }
           ws.onclose = function(){
@@ -24,7 +24,7 @@
     </script>
 </head>
 <body>
-	<h1>Real-Time SG Tweets Per Minute</h1>
+	<h1>Real-Time SG Indexed Tweets Per Minute</h1>
 	<div id="tpm_sg_fig"></div>
 </body>
 </html>
