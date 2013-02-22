@@ -35,3 +35,8 @@ The server will listen to the specified Redis channel. Once a new notificiation 
 	http://10.0.106.64/stream
 
 Look at Chrome's console for WebSocket updates. The time series plot should be updated every minute.
+
+To do
+-----
+
+* New Feature: Revamped web front-end real-time visualization UI. May implement it in cubism (https://github.com/square/cubism) or graphite (graphite.readthedocs.org/en/latest/).
