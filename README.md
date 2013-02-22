@@ -5,8 +5,8 @@ Monitoring tweet streaming data via a REST API source in real-time using Tornado
 
 The demo has been tested in Ubuntu 12.04 and CentOS 6.2.
 
-Required:
----------
+Required
+--------
 
 * Python
 * Tornado
@@ -39,4 +39,4 @@ Look at Chrome's console for WebSocket updates. The time series plot should be u
 To do
 -----
 
-* New Feature: Revamped web front-end real-time visualization UI. May implement it in cubism (https://github.com/square/cubism) or graphite (graphite.readthedocs.org/en/latest/).
+* New Feature: Revamped web front-end real-time visualization UI. Possible implementation in cubism (https://github.com/square/cubism), graphite (http://graphite.readthedocs.org/en/latest/), or envision.js (http://www.humblesoftware.com/envision/demos/realtime).
